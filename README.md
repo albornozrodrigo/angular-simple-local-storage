@@ -3,14 +3,14 @@ Simple local storage service for AngularJS projects, inspired by [this formula](
 
 ## Installation
 
-Clone or download this repository.
+Install with bower (or download/clone).
 ```shell
-git clone https://github.com/xchilenox/angular-simple-local-storage.git
+bower install angular-simple-local-storage
 ```
 
 Add the `<script>` in your `index.html`.
 ```html
-<script src="lib/angular-simple-local-storage/ng-storage.min.js"></script>
+<script src="/bower_components/angular-simple-local-storage/dist/ng-storage.min.js"></script>
 ```
 
 Add the dependency in your app.
