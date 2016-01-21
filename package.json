@@ -1,6 +1,6 @@
 {
   "name": "angular-simple-local-storage",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Simple local storage service for AngularJS projects.",
   "homepage": "https://github.com/xchilenox/angular-simple-local-storage",
   "author": "Rodrigo Albornoz <rodrigo.albornoz.f@gmail.com>",
@@ -23,7 +23,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.1"
+    "gulp-uglify": "^1.5.1",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
   }
 }

@@ -33,41 +33,41 @@
 					key: key,
 					value: item
 				});
-			};
+			}
 			return content;
-		};
+		}
 
 		function put(key, value) {
 			if(!angular.isObject(value)) {
 				$window.localStorage[key] = value;
 			} else {
 				console.log('The value could not be an object.');
-			};
-		};
+			}
+		}
 
 		function get(key) {
 			var content = $window.localStorage[key];
           	return content ? content : null;
-		};
+		}
 
 		function putObject(key, value) {
 			if(angular.isObject(value)) {
 				$window.localStorage[key] = angular.toJson(value);
 			} else {
 				console.log('The value might be an object.');
-			};
-		};
+			}
+		}
 
 		function getObject(key) {
 			var content = $window.localStorage[key];
           	return content ? angular.fromJson(content) : null;
-		};
+		}
 
 		function remove(key) {
 			return $window.localStorage.removeItem(key) || null;
-		};
+		}
 
 		return factory;
-	};
+	}
 
 })();
