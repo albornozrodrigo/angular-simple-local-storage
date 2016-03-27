@@ -36,27 +36,41 @@ angular.module('App', ['ngStorage']);
 		console.log($localStorage.getAll());
 
 		// Putting and retrieving simple data
-		$localStorage.put('band', 'Pantera');
+		$localStorage.put('band', 'Heaven & Hell');
 		console.log($localStorage.get('band'));
 
 		// Putting and retrieving an object
 		$localStorage.putObject('band', {
-			name: 'Pantera',
-			voice: 'Phil Anselmo',
-			guitar: 'Dimebag Darrel',
-			bass: 'Rex Brown',
-			drums: 'Vinnie Paul Abbott'
+			name: 'Heaven & Hell',
+			voice: 'Ronnie James Dio',
+			guitar: 'Tony Iommi',
+			bass: 'Geezer Butler',
+			drums: 'Vinny Appice'
 		});
 		console.log($localStorage.getObject('band'));
 		console.log($localStorage.getObject('band').voice);
 
+		// Putting and retrieving an array
+		$localStorage.putArray('books', [
+			'Cosmos, by Carl Sagan',
+			'The God Delusion, by Richard Dawkins',
+			'God is Not Great, by Christopher Hitchens',
+			'The End of Faith, by Sam Harris',
+			'The Universe From Nothing, by Lawrence Krauss'
+		]);
+		console.log($localStorage.getArray('books'));
+		console.log($localStorage.getArray('books')[0]);
+
 		// Removing data by the key
+		$localStorage.remove('books');
 		$localStorage.remove('band');
 		$localStorage.remove('avengers');
 		$localStorage.remove('justice-league');
+		console.log($localStorage.getArray('books'));
 		console.log($localStorage.getObject('band'));
 		console.log($localStorage.get('avengers'));
 		console.log($localStorage.get('justice-league'));
+		console.log($localStorage.removeAll());
 	};
 
 })();

@@ -16,7 +16,10 @@
 			get: get,
 			putObject: putObject,
 			getObject: getObject,
-			remove: remove
+			putArray: putArray,
+			getArray: getArray,
+			remove: remove,
+			removeAll: removeAll
 		};
 
 		function getAll() {
@@ -58,13 +61,37 @@
 			}
 		}
 
+		function putArray(key, value) {
+			if(angular.isArray(value)) {
+				$window.localStorage[key] = angular.toJson(value);
+			} else {
+				console.log('The value might be an array.');
+			}
+		}
+
 		function getObject(key) {
+			var content = $window.localStorage[key];
+          	return content ? angular.fromJson(content) : null;
+		}
+
+		function getArray(key) {
 			var content = $window.localStorage[key];
           	return content ? angular.fromJson(content) : null;
 		}
 
 		function remove(key) {
 			return $window.localStorage.removeItem(key) || null;
+		}
+
+		function removeAll() {
+			var keys = Object.keys($window.localStorage);
+			var len = keys.length;
+			var key;
+			while(len--) {
+				key = keys[len];
+				$window.localStorage.removeItem(key);
+			}
+			return getAll();
 		}
 
 		return factory;
