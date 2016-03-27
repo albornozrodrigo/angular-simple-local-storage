@@ -1,6 +1,6 @@
 {
   "name": "angular-simple-local-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple local storage service for AngularJS projects.",
   "homepage": "https://github.com/xchilenox/angular-simple-local-storage",
   "author": "Rodrigo Albornoz <rodrigo.albornoz.f@gmail.com>",
