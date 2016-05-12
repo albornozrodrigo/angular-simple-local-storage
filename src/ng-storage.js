@@ -18,6 +18,8 @@
 			getObject: getObject,
 			putArray: putArray,
 			getArray: getArray,
+			arrayPush: arrayPush,
+			arraySplice: arraySplice,
 			remove: remove,
 			removeAll: removeAll
 		};
@@ -67,6 +69,18 @@
 			} else {
 				console.log('The value might be an array.');
 			}
+		}
+
+		function arrayPush(key, value) {
+			var content = getArray(key);
+			content.push(value);
+			putArray(key, content);
+		}
+
+		function arraySplice(key, index) {
+			var content = getArray(key);
+			content.splice(index, 1);
+			putArray(key, content);
 		}
 
 		function getObject(key) {

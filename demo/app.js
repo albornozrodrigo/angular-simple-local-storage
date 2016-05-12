@@ -36,6 +36,12 @@
 		console.log($localStorage.getArray('books'));
 		console.log($localStorage.getArray('books')[0]);
 
+		$localStorage.arrayPush('books', 'The Origin of Species, by Charles Darwin');
+		console.log($localStorage.getArray('books'));
+
+		$localStorage.arraySplice('books', 3);
+		console.log($localStorage.getArray('books'));
+
 		$localStorage.remove('books');
 		$localStorage.remove('band');
 		$localStorage.remove('avengers');
